@@ -1,64 +1,128 @@
 export const projects = [
   {
-    title: "Code Nexus",
+    title: "NeuralOps",
+
     description:
-      "Developer-focused code snippet platform with modern UI and clean architecture.",
+      "AI SaaS-inspired modern frontend experience with premium UI system, responsive layouts and futuristic product aesthetics.",
 
-    image: "/projects/code-nexus.png",
+    image: "/projects/nueralops.png",
 
-    live:
-      "https://code-nexus-next-fresh.vercel.app/",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
 
     github:
-      "https://github.com/ShikhaGond",
+      "https://github.com/ShikhaGond/neuralops",
+
+    live:
+      "https://neuralops-red.vercel.app/",
+  },
+
+  {
+    title: "Code Nexus",
+
+    description:
+      "Developer-focused code snippet platform with clean architecture, responsive UI and modern frontend interactions.",
+
+    image: "/projects/code-nexus.png",
 
     tech: [
       "Next.js",
       "TypeScript",
       "Tailwind",
-      "Framer Motion",
     ],
+
+    github:
+      "https://github.com/ShikhaGond/code-nexus-next-fresh",
+
+    live:
+      "https://code-nexus-next-fresh.vercel.app/",
+  },
+
+  {
+    title: "Brew Haven",
+
+    description:
+      "Premium coffee brand website with elegant product presentation, immersive visuals and modern UI patterns.",
+
+    image: "/projects/brew-haven.png",
+
+    tech: [
+      "React",
+      "Tailwind CSS",
+      "Responsive Design",
+    ],
+
+    github:
+      "https://github.com/ShikhaGond/brew-haven",
+
+    live:
+      "https://brew-haven-rose.vercel.app/",
+  },
+
+  {
+    title: "Movie App",
+
+    description:
+      "Movie discovery application powered by APIs with responsive browsing experience and dynamic search functionality.",
+
+    image: "/projects/netflix-ui.png",
+
+    tech: [
+      "React",
+      "REST APIs",
+      "Tailwind",
+    ],
+
+    github:
+      "https://github.com/ShikhaGond/nexlify-landing-page-design-assignment",
+
+    live:
+      "https://movie-app-five-sable.vercel.app/",
+  },
+
+  {
+    title: "Lunar Dream Journal",
+
+    description:
+      "Creative journaling experience with immersive visuals, smooth transitions and emotionally-driven interface design.",
+
+    image: "/projects/lunar.png",
+
+    tech: [
+      "React",
+      "Animations",
+      "Tailwind CSS",
+    ],
+
+    github:
+      "https://github.com/ShikhaGond/",
+
+    live:
+      "https://lunar-dream-journal.netlify.app/",
   },
 
   {
     title: "Coding Playground",
 
     description:
-      "Interactive coding playground with responsive developer-focused experience.",
+      "Interactive frontend playground focused on code experimentation and responsive developer experience.",
 
     image: "/projects/playground.png",
 
+    tech: [
+      "JavaScript",
+      "React",
+      "UI Engineering",
+    ],
+
+    github:
+      "https://github.com/ShikhaGond",
+
     live:
       "https://play-with-the-code.netlify.app/",
-
-    github:
-      "https://github.com/ShikhaGond",
-
-    tech: [
-      "React",
-      "Tailwind",
-      "JavaScript",
-    ],
-  },
-
-  {
-    title: "Netflix Inspired UI",
-
-    description:
-      "Premium streaming platform inspired landing page with polished responsive design.",
-
-    image: "/projects/netflix-ui.png",
-
-    live:
-      "https://nexlify-landing-page-design-assignm.vercel.app/",
-
-    github:
-      "https://github.com/ShikhaGond",
-
-    tech: [
-      "Next.js",
-      "Tailwind",
-      "Responsive Design",
-    ],
   },
 ];
