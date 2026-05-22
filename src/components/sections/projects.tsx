@@ -18,6 +18,7 @@ export function Projects() {
           <h2 className="text-4xl font-bold">
             Selected Projects
           </h2>
+          <div className="w-24 h-[2px] bg-blue-500/40 rounded-full mt-6" />
         </div>
 
         <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10">

@@ -1,80 +1,162 @@
+"use client";
+
+import { motion } from "framer-motion";
+
+import {
+  Code2,
+  Sparkles,
+  LayoutDashboard,
+  Rocket,
+} from "lucide-react";
+
+const stats = [
+  {
+    value: "6+",
+    label: "Projects Built",
+    icon: LayoutDashboard,
+  },
+
+  {
+    value: "10+",
+    label: "Technologies",
+    icon: Code2,
+  },
+
+  {
+    value: "100+",
+    label: "DSA Problems",
+    icon: Sparkles,
+  },
+
+  {
+    value: "90+",
+    label: "Lighthouse Scores",
+    icon: Rocket,
+  },
+];
+
 export function About() {
   return (
     <section
       id="about"
-      className="py-32 bg-black text-white"
+      className="relative py-32 bg-black text-white overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6">
 
-        <p className="text-blue-500 mb-4">
-          About Me
-        </p>
+      {/* Background Glow */}
 
-        <h2 className="text-5xl font-bold mb-10">
-          Frontend developer focused on modern UI engineering
-        </h2>
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-500/5 blur-[120px] rounded-full" />
 
-        <div className="grid lg:grid-cols-2 gap-10">
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-          <div className="space-y-6 text-zinc-400 text-lg leading-relaxed">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
 
-            <p>
-              Passionate Frontend Developer with hands-on experience building responsive and high-performance web applications using React.js, Next.js, TypeScript and Tailwind CSS.
+          {/* Left */}
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 30,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 0.7,
+            }}
+          >
+
+            <p className="text-blue-500 uppercase tracking-wider text-sm mb-4">
+              About Me
             </p>
 
-            <p>
-              I specialize in building scalable interfaces with clean architecture, accessibility and smooth user experiences.
-            </p>
+            <h2 className="text-5xl md:text-6xl font-bold leading-tight mb-8">
+              Frontend engineer passionate about modern UI systems.
+            </h2>
 
-            <p>
-              Currently exploring modern frontend systems, animations and AI-assisted workflows.
-            </p>
+            <div className="w-24 h-[2px] bg-blue-500/40 rounded-full mb-10" />
 
-          </div>
+            <div className="space-y-7 text-zinc-400 text-lg leading-relaxed">
 
-          <div className="grid grid-cols-2 gap-6">
-
-            <div className="glass rounded-3xl p-8">
-              <h3 className="text-4xl font-bold mb-3">
-                15+
-              </h3>
-
-              <p className="text-zinc-400">
-                Projects Built
+              <p>
+                Passionate Frontend Developer with hands-on experience building responsive and high-performance web applications using React.js, Next.js, TypeScript and Tailwind CSS.
               </p>
+
+              <p>
+                I specialize in translating ideas and Figma designs into clean, scalable and accessible interfaces with smooth interactions and modern user experiences.
+              </p>
+
+              <p>
+                Currently focused on frontend engineering, performance optimization, design systems and continuously improving through real-world projects.
+              </p>
+
             </div>
 
-            <div className="glass rounded-3xl p-8">
-              <h3 className="text-4xl font-bold mb-3">
-                10+
-              </h3>
+          </motion.div>
 
-              <p className="text-zinc-400">
-                Technologies
-              </p>
-            </div>
+          {/* Right */}
 
-            <div className="glass rounded-3xl p-8">
-              <h3 className="text-4xl font-bold mb-3">
-                100+
-              </h3>
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 30,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              duration: 0.7,
+              delay: 0.2,
+            }}
+            className="grid grid-cols-2 gap-6"
+          >
 
-              <p className="text-zinc-400">
-                DSA Problems
-              </p>
-            </div>
+            {stats.map((stat) => {
+              const Icon = stat.icon;
 
-            <div className="glass rounded-3xl p-8">
-              <h3 className="text-4xl font-bold mb-3">
-                90+
-              </h3>
+              return (
+                <div
+                  key={stat.label}
+                  className="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-xl p-8 hover:-translate-y-2 transition-all duration-500"
+                >
 
-              <p className="text-zinc-400">
-                Lighthouse Scores
-              </p>
-            </div>
+                  {/* Hover Glow */}
 
-          </div>
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-blue-500/5" />
+
+                  <div className="relative z-10">
+
+                    <div className="w-14 h-14 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center mb-8">
+
+                      <Icon
+                        size={26}
+                        className="text-blue-400"
+                      />
+
+                    </div>
+
+                    <h3 className="text-5xl font-bold mb-4 bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent">
+                      {stat.value}
+                    </h3>
+
+                    <p className="text-zinc-400">
+                      {stat.label}
+                    </p>
+
+                  </div>
+
+                </div>
+              );
+            })}
+
+          </motion.div>
 
         </div>
 

@@ -31,6 +31,7 @@ export function Testimonials() {
           <h2 className="text-4xl font-bold">
             What People Say
           </h2>
+          <div className="w-24 h-[2px] bg-blue-500/40 rounded-full mt-6" />
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">

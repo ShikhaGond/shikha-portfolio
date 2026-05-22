@@ -46,10 +46,12 @@ export function Journey() {
         <p className="text-blue-500 mb-4">
           My Journey
         </p>
+        
 
         <h2 className="text-5xl font-bold mb-20">
           Growth Through Continuous Learning
         </h2>
+        
 
         <div className="relative border-l border-white/10 pl-10 space-y-16">
 

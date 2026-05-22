@@ -13,6 +13,7 @@ export function Contact() {
         <h2 className="text-5xl font-bold mb-6">
           Let’s Build Something Great
         </h2>
+        <div className="w-24 h-[2px] bg-blue-500/40 rounded-full mt-6" />
 
         <p className="text-zinc-400 text-lg mb-10 max-w-2xl mx-auto">
           I’m currently open to frontend development opportunities and collaborations.
