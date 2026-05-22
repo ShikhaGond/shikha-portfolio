@@ -11,7 +11,7 @@ import {
 
 const stats = [
   {
-    value: "6+",
+    value: "10+",
     label: "Projects Built",
     icon: LayoutDashboard,
   },
