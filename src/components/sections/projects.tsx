@@ -20,7 +20,7 @@ export function Projects() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10">
           {projects.map((project) => (
             <ProjectCard
               key={project.title}
