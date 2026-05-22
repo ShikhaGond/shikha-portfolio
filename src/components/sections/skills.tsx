@@ -63,8 +63,23 @@ const skillCategories = [
 
 export function Skills() {
   return (
-    <section
+    <motion.section
       id="skills"
+      initial={{
+        opacity: 0,
+        y: 40,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+        amount: 0.2,
+      }}
+      transition={{
+        duration: 0.7,
+      }}
       className="relative py-32 bg-black text-white overflow-hidden"
     >
 
@@ -76,23 +91,7 @@ export function Skills() {
 
         {/* Heading */}
 
-        <motion.div
-          initial={{
-            opacity: 0,
-            y: 30,
-          }}
-          whileInView={{
-            opacity: 1,
-            y: 0,
-          }}
-          viewport={{
-            once: true,
-          }}
-          transition={{
-            duration: 0.6,
-          }}
-          className="mb-20"
-        >
+        <div className="mb-20">
 
           <p className="text-blue-500 mb-4 tracking-wider uppercase text-sm">
             Skills
@@ -104,7 +103,7 @@ export function Skills() {
 
           <div className="w-24 h-[2px] bg-blue-500/40 rounded-full mt-6" />
 
-        </motion.div>
+        </div>
 
         {/* Grid */}
 
@@ -194,6 +193,7 @@ export function Skills() {
         </div>
 
       </div>
-    </section>
+
+    </motion.section>
   );
 }

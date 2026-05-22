@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const timeline = [
   {
     year: "2020",
@@ -37,27 +41,60 @@ const timeline = [
 
 export function Journey() {
   return (
-    <section
+    <motion.section
       id="journey"
-      className="py-32 bg-black text-white"
+      initial={{
+        opacity: 0,
+        y: 40,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+        amount: 0.2,
+      }}
+      transition={{
+        duration: 0.7,
+      }}
+      className="relative py-32 bg-black text-white overflow-hidden"
     >
-      <div className="max-w-5xl mx-auto px-6">
 
-        <p className="text-blue-500 mb-4">
-          My Journey
+      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-500/5 blur-[120px] rounded-full" />
+
+      <div className="max-w-5xl mx-auto px-6 relative z-10">
+
+        <p className="text-blue-500 uppercase tracking-wider text-sm mb-4">
+          Journey
         </p>
-        
 
-        <h2 className="text-5xl font-bold mb-20">
+        <h2 className="text-5xl md:text-6xl font-bold mb-6">
           Growth Through Continuous Learning
         </h2>
-        
+
+        <div className="w-24 h-[2px] bg-blue-500/40 rounded-full mb-20" />
 
         <div className="relative border-l border-white/10 pl-10 space-y-16">
 
-          {timeline.map((item) => (
-            <div
+          {timeline.map((item, index) => (
+            <motion.div
               key={item.year}
+              initial={{
+                opacity: 0,
+                x: -20,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
+              transition={{
+                delay: index * 0.1,
+                duration: 0.6,
+              }}
               className="relative"
             >
 
@@ -75,12 +112,13 @@ export function Journey() {
                 {item.description}
               </p>
 
-            </div>
+            </motion.div>
           ))}
 
         </div>
 
       </div>
-    </section>
+
+    </motion.section>
   );
 }

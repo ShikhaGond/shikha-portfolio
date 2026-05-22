@@ -37,8 +37,23 @@ const stats = [
 
 export function About() {
   return (
-    <section
+    <motion.section
       id="about"
+      initial={{
+        opacity: 0,
+        y: 40,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+        amount: 0.2,
+      }}
+      transition={{
+        duration: 0.7,
+      }}
       className="relative py-32 bg-black text-white overflow-hidden"
     >
 
@@ -52,22 +67,7 @@ export function About() {
 
           {/* Left */}
 
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: 30,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
-            transition={{
-              duration: 0.7,
-            }}
-          >
+          <div>
 
             <p className="text-blue-500 uppercase tracking-wider text-sm mb-4">
               About Me
@@ -95,28 +95,11 @@ export function About() {
 
             </div>
 
-          </motion.div>
+          </div>
 
           {/* Right */}
 
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: 30,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            viewport={{
-              once: true,
-            }}
-            transition={{
-              duration: 0.7,
-              delay: 0.2,
-            }}
-            className="grid grid-cols-2 gap-6"
-          >
+          <div className="grid grid-cols-2 gap-6">
 
             {stats.map((stat) => {
               const Icon = stat.icon;
@@ -156,11 +139,12 @@ export function About() {
               );
             })}
 
-          </motion.div>
+          </div>
 
         </div>
 
       </div>
-    </section>
+
+    </motion.section>
   );
 }

@@ -18,10 +18,15 @@ import { Testimonials } from "@/src/components/sections/testimonials";
 
 import { Contact } from "@/src/components/sections/contact";
 
+import { ScrollProgress } from "@/src/components/ui/scroll-progress";
+
+import { CursorGlow } from "@/src/components/ui/cursor-glow";
+
 export default function Home() {
   return (
     <main className="bg-black text-white overflow-x-hidden">
-
+        <CursorGlow />
+      <ScrollProgress />
       <Navbar />
 
       <Hero />
